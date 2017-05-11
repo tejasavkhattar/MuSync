@@ -26,15 +26,13 @@ public class HostPanel extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_host_panel);
         Uri playlistsUri = Uri.parse("content://com.google.android.music.MusicContent/playlists");
-       /* Cursor playlists = getApplicationContext().getContentResolver().query(playlistsUri, new String[]{"_id", "playlist_name"}, null, null, null);
-        playlists.moveToFirst();
-        playlists.close();*/
+       
 
         mRequestqueue=VolleySingleton.getInstance(getApplicationContext()).getRequestQueue();
         getRequest();
 
 
-       
+
 
     }
     private String [] getMusic() {
